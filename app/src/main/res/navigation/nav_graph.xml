@@ -28,7 +28,7 @@
         tools:layout="@layout/fragment_pair_chart">
 
         <argument
-            android:name="pair_name"
+            android:name="pair_normalized"
             app:argType="string" />
 
     </fragment>

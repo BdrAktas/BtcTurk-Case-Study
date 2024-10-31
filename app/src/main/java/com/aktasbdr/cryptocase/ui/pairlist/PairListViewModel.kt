@@ -63,9 +63,9 @@ class PairListViewModel @Inject constructor(
         }
     }
 
-    fun onPairClicked(pairName: String) {
+    fun onPairClicked( pairNormalized: String) {
         viewModelScope.launch {
-            val event = NavigateToPairChart(pairName.replace("_", ""))
+            val event = NavigateToPairChart(pairNormalized)
             _uiEvent.emit(event)
         }
     }

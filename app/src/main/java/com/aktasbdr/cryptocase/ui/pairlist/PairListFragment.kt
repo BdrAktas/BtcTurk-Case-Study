@@ -26,7 +26,7 @@ class PairListFragment : Fragment() {
     private val pairListAdapter: PairListAdapter by lazy {
         PairListAdapter(
             onFavoriteClicked = { viewModel.onFavoriteClicked(it) },
-            onItemClicked = { viewModel.onPairClicked(it.ticker.pair) },
+            onItemClicked = { viewModel.onPairClicked(it.ticker.pairNormalized) }
         )
     }
 
@@ -73,7 +73,9 @@ class PairListFragment : Fragment() {
     private fun handleEvent(uiEvent: PairListUiEvent) {
         when (uiEvent) {
             is NavigateToPairChart -> {
-                val directions = PairListFragmentDirections.navigateToPairChart(uiEvent.pairName)
+                val directions = PairListFragmentDirections.navigateToPairChart(
+                    pairNormalized = uiEvent.pairNormalized
+                )
                 findNavController().navigate(directions)
             }
         }

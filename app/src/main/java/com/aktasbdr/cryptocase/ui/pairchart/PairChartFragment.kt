@@ -44,7 +44,7 @@ class PairChartFragment : Fragment() {
         initView()
         collectState(viewModel.uiState, ::renderView)
         collectEvent(viewModel.uiEvent, ::handleEvent)
-        viewModel.init(args.pairName)
+        viewModel.init(args.pairNormalized.replace("_", ""))
     }
 
     override fun onResume() {
@@ -57,7 +57,8 @@ class PairChartFragment : Fragment() {
     }
 
     private fun renderView(uiState: PairChartUiState) = with(binding) {
-        (requireActivity() as AppCompatActivity).supportActionBar?.title = uiState.symbol
+        val titleWithChart = "               ${args.pairNormalized.replace("_", "/")} Chart"
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = titleWithChart
 
         val lineDataSet = LineDataSet(uiState.entries, uiState.symbol).apply {
             setDrawFilled(true)
