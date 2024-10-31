@@ -82,9 +82,9 @@ class FavoriteListAdapter(
 
         val dailyPercentColorResId: Int
             get() = when {
-                favorite.dailyPercent > 0 -> R.color.fun_green
-                favorite.dailyPercent < 0 -> R.color.thunderbird
-                else -> R.color.alabaster
+                favorite.dailyPercent > 0 -> R.color.vibrant_green
+                favorite.dailyPercent < 0 -> R.color.bright_red
+                else -> R.color.light_gray
             }
     }
 }

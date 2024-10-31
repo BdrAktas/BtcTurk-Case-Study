@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="4dp"
         android:ellipsize="end"
         android:gravity="center"
-        android:textColor="@color/alabaster"
+        android:textColor="@color/light_gray"
         android:textSize="12sp" />
 
 </LinearLayout>

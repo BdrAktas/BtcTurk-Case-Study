@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_ticker_item"
-    tools:background="@color/ebony">
+    tools:background="@color/dark_navy">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivFavorite"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:textColor="@color/alabaster"
+        android:textColor="@color/light_gray"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/ivFavorite"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:textColor="@color/alabaster"
+        android:textColor="@color/light_gray"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@id/tvDailyPercent"
         app:layout_constraintTop_toTopOf="parent"
@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvLast"
         tools:text="%10,25"
-        tools:textColor="@color/thunderbird" />
+        tools:textColor="@color/bright_red" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvVolumeAndNumeratorName"
@@ -61,7 +61,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:textColor="@color/manatee"
+        android:textColor="@color/soft_gray"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

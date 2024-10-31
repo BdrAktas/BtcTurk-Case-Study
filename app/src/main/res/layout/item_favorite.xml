@@ -12,7 +12,7 @@
         android:id="@+id/tvPairName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/alabaster"
+        android:textColor="@color/light_gray"
         android:textSize="14sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="ADA/USDT" />
@@ -21,7 +21,7 @@
         android:id="@+id/tvLast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/alabaster"
+        android:textColor="@color/light_gray"
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/tvPairName"
         tools:text="2,35" />
@@ -33,6 +33,6 @@
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/tvLast"
         tools:text="%1,25"
-        tools:textColor="@color/thunderbird" />
+        tools:textColor="@color/bright_red" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

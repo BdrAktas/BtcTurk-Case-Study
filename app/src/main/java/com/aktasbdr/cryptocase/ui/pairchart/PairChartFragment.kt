@@ -70,7 +70,7 @@ class PairChartFragment : Fragment() {
         lineChart.apply {
             data = LineData(lineDataSet)
             axisLeft.isEnabled = false
-            axisRight.textColor = ContextCompat.getColor(context, R.color.alabaster)
+            axisRight.textColor = ContextCompat.getColor(context, R.color.light_gray)
             axisRight.setDrawAxisLine(false)
             xAxis.isEnabled = false
             description.isEnabled = false

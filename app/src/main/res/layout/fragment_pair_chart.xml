@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@color/ebony">
+    tools:background="@color/dark_navy">
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/lineChart"
@@ -12,7 +12,7 @@
         android:layout_height="200dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="24dp"
-        android:background="@color/mirage"
+        android:background="@color/deep_blue"
         android:padding="8dp"
         app:layout_constraintTop_toTopOf="parent" />
 

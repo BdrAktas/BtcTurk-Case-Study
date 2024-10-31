@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CryptoCaseStudy</string>
+    <string name="app_name">Crypto Case Study</string>
     <string name="favorites">Favorites</string>
     <string name="pairs">Pairs</string>
     <string name="percentage_format">%%%1$.2f</string>

@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:background="@color/ebony">
+        tools:background="@color/dark_navy">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clFavorites"
@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="@string/favorites"
-                android:textColor="@color/alabaster"
+                android:textColor="@color/light_gray"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="@string/pairs"
-            android:textColor="@color/alabaster"
+            android:textColor="@color/light_gray"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/clFavorites" />

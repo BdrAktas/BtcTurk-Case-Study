@@ -96,9 +96,9 @@ class PairListAdapter(
 
         val dailyPercentColorResId: Int
             get() = when {
-                ticker.dailyPercent > 0 -> R.color.fun_green
-                ticker.dailyPercent < 0 -> R.color.thunderbird
-                else -> R.color.manatee
+                ticker.dailyPercent > 0 -> R.color.vibrant_green
+                ticker.dailyPercent < 0 -> R.color.bright_red
+                else -> R.color.soft_gray
             }
     }
 }

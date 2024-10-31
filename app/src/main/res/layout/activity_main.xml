@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ebony"
+    android:background="@color/dark_navy"
     tools:context="com.aktasbdr.cryptocase.ui.MainActivity">
 
     <fragment
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.5"
-        android:background="@color/ebony"
+        android:background="@color/dark_navy"
         android:clickable="true"
         android:focusable="true"
         android:visibility="gone"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:indeterminate="true"
-            app:indicatorColor="@color/alabaster" />
+            app:indicatorColor="@color/light_gray" />
 
     </FrameLayout>
 
