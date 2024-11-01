@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.utils
+package com.aktasbdr.cryptocase.core.domain.mapper
 
 import android.annotation.SuppressLint
 import java.util.*

@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.utils
+package com.aktasbdr.cryptocase.core.presentation.extensions
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment

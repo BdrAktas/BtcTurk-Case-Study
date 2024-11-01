@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.utils
+package com.aktasbdr.cryptocase.core.domain.mapper
 
 interface Mapper<in Input, out Output> {
     fun map(input: Input): Output

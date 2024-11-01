@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.utils
+package com.aktasbdr.cryptocase.core.presentation.extensions
 
 import kotlin.LazyThreadSafetyMode.NONE
 

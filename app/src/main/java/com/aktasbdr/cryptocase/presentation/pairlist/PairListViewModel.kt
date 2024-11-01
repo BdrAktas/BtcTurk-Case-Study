@@ -1,12 +1,12 @@
-package com.aktasbdr.cryptocase.ui.pairlist
+package com.aktasbdr.cryptocase.presentation.pairlist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aktasbdr.cryptocase.domain.model.Ticker
 import com.aktasbdr.cryptocase.domain.usecase.*
-import com.aktasbdr.cryptocase.ui.pairlist.FavoriteListAdapter.FavoriteListItem
-import com.aktasbdr.cryptocase.ui.pairlist.PairListAdapter.PairListItem
-import com.aktasbdr.cryptocase.ui.pairlist.PairListUiEvent.NavigateToPairChart
+import com.aktasbdr.cryptocase.presentation.pairlist.FavoriteListAdapter.FavoriteListItem
+import com.aktasbdr.cryptocase.presentation.pairlist.PairListAdapter.PairListItem
+import com.aktasbdr.cryptocase.presentation.pairlist.PairListUiEvent.NavigateToPairChart
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch

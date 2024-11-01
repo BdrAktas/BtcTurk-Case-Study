@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.ui.pairchart
+package com.aktasbdr.cryptocase.presentation.pairchart
 
 import com.github.mikephil.charting.data.Entry
 import com.aktasbdr.cryptocase.domain.model.KlineData

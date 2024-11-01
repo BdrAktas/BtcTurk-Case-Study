@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.ui
+package com.aktasbdr.cryptocase.presentation
 
 sealed class MainUiEvent {
     data class ShowErrorMessage(

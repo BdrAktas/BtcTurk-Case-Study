@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.ui.pairlist
+package com.aktasbdr.cryptocase.presentation.pairlist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.aktasbdr.cryptocase.R
 import com.aktasbdr.cryptocase.databinding.FragmentPairListBinding
-import com.aktasbdr.cryptocase.ui.pairlist.PairListUiEvent.NavigateToPairChart
-import com.aktasbdr.cryptocase.utils.collectEvent
-import com.aktasbdr.cryptocase.utils.collectState
-import com.aktasbdr.cryptocase.utils.viewBinding
+import com.aktasbdr.cryptocase.presentation.pairlist.PairListUiEvent.NavigateToPairChart
+import com.aktasbdr.cryptocase.core.presentation.extensions.collectEvent
+import com.aktasbdr.cryptocase.core.presentation.extensions.collectState
+import com.aktasbdr.cryptocase.core.presentation.extensions.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

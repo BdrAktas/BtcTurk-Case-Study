@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.ui.pairchart
+package com.aktasbdr.cryptocase.presentation.pairchart
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,10 +14,10 @@ import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.aktasbdr.cryptocase.R
 import com.aktasbdr.cryptocase.databinding.FragmentPairChartBinding
-import com.aktasbdr.cryptocase.utils.collectEvent
-import com.aktasbdr.cryptocase.utils.collectState
-import com.aktasbdr.cryptocase.utils.viewBinding
-import com.aktasbdr.cryptocase.widget.CustomMarker
+import com.aktasbdr.cryptocase.core.presentation.extensions.collectEvent
+import com.aktasbdr.cryptocase.core.presentation.extensions.collectState
+import com.aktasbdr.cryptocase.core.presentation.extensions.viewBinding
+import com.aktasbdr.cryptocase.presentation.components.CustomMarker
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

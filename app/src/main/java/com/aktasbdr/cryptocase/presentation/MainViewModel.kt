@@ -1,10 +1,10 @@
-package com.aktasbdr.cryptocase.ui
+package com.aktasbdr.cryptocase.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aktasbdr.cryptocase.domain.usecase.ShowError
 import com.aktasbdr.cryptocase.domain.usecase.ShowLoading
-import com.aktasbdr.cryptocase.ui.MainUiEvent.ShowErrorMessage
+import com.aktasbdr.cryptocase.presentation.MainUiEvent.ShowErrorMessage
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import javax.inject.Inject

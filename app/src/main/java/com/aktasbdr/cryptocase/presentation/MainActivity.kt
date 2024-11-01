@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.ui
+package com.aktasbdr.cryptocase.presentation
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -10,11 +10,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.aktasbdr.cryptocase.R
 import com.aktasbdr.cryptocase.databinding.ActivityMainBinding
-import com.aktasbdr.cryptocase.ui.MainUiEvent.ShowErrorMessage
-import com.aktasbdr.cryptocase.utils.collectEvent
-import com.aktasbdr.cryptocase.utils.collectState
-import com.aktasbdr.cryptocase.utils.showError
-import com.aktasbdr.cryptocase.utils.viewBinding
+import com.aktasbdr.cryptocase.presentation.MainUiEvent.ShowErrorMessage
+import com.aktasbdr.cryptocase.core.presentation.extensions.collectEvent
+import com.aktasbdr.cryptocase.core.presentation.extensions.collectState
+import com.aktasbdr.cryptocase.core.presentation.extensions.showError
+import com.aktasbdr.cryptocase.core.presentation.extensions.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

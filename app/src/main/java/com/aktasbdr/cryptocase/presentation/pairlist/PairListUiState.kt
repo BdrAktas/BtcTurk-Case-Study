@@ -1,8 +1,8 @@
-package com.aktasbdr.cryptocase.ui.pairlist
+package com.aktasbdr.cryptocase.presentation.pairlist
 
 import com.aktasbdr.cryptocase.domain.model.Ticker
-import com.aktasbdr.cryptocase.ui.pairlist.FavoriteListAdapter.FavoriteListItem
-import com.aktasbdr.cryptocase.ui.pairlist.PairListAdapter.PairListItem
+import com.aktasbdr.cryptocase.presentation.pairlist.FavoriteListAdapter.FavoriteListItem
+import com.aktasbdr.cryptocase.presentation.pairlist.PairListAdapter.PairListItem
 
 data class PairListUiState(
     val favoriteItems: List<FavoriteListItem> = emptyList(),

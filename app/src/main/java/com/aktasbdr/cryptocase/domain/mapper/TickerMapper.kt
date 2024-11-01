@@ -2,8 +2,8 @@ package com.aktasbdr.cryptocase.domain.mapper
 
 import com.aktasbdr.cryptocase.data.model.TickersResponse.TickerResponse
 import com.aktasbdr.cryptocase.domain.model.Ticker
-import com.aktasbdr.cryptocase.utils.Mapper
-import com.aktasbdr.cryptocase.utils.orZero
+import com.aktasbdr.cryptocase.core.domain.mapper.Mapper
+import com.aktasbdr.cryptocase.core.presentation.extensions.orZero
 import javax.inject.Inject
 
 class TickerMapper @Inject constructor() : Mapper<TickerResponse, Ticker> {

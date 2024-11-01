@@ -3,7 +3,7 @@ package com.aktasbdr.cryptocase.domain.usecase
 import com.aktasbdr.cryptocase.data.repository.CommonRepository
 import com.aktasbdr.cryptocase.domain.mapper.TickerMapper
 import com.aktasbdr.cryptocase.domain.model.Ticker
-import com.aktasbdr.cryptocase.utils.mapWith
+import com.aktasbdr.cryptocase.core.domain.mapper.mapWith
 import javax.inject.Inject
 
 class FetchTickerList @Inject constructor(

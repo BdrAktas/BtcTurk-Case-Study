@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.ui.pairlist
+package com.aktasbdr.cryptocase.presentation.pairlist
 
 import android.annotation.SuppressLint
 import android.view.ViewGroup
@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.aktasbdr.cryptocase.R
 import com.aktasbdr.cryptocase.databinding.ItemFavoriteBinding
 import com.aktasbdr.cryptocase.domain.model.Favorite
-import com.aktasbdr.cryptocase.ui.pairlist.FavoriteListAdapter.FavoriteListItem
-import com.aktasbdr.cryptocase.ui.pairlist.FavoriteListAdapter.FavoriteListItemViewHolder
-import com.aktasbdr.cryptocase.utils.inflater
+import com.aktasbdr.cryptocase.presentation.pairlist.FavoriteListAdapter.FavoriteListItem
+import com.aktasbdr.cryptocase.presentation.pairlist.FavoriteListAdapter.FavoriteListItemViewHolder
+import com.aktasbdr.cryptocase.core.presentation.extensions.inflater
 import kotlin.math.absoluteValue
 
 class FavoriteListAdapter(

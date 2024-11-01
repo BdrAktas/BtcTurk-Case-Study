@@ -3,7 +3,7 @@ package com.aktasbdr.cryptocase.domain.usecase
 import com.aktasbdr.cryptocase.data.repository.FavoriteRepository
 import com.aktasbdr.cryptocase.domain.mapper.FavoriteMapper
 import com.aktasbdr.cryptocase.domain.model.Favorite
-import com.aktasbdr.cryptocase.utils.mapWith
+import com.aktasbdr.cryptocase.core.domain.mapper.mapWith
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

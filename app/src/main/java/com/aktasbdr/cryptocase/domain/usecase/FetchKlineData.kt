@@ -3,8 +3,8 @@ package com.aktasbdr.cryptocase.domain.usecase
 import com.aktasbdr.cryptocase.data.repository.GraphRepository
 import com.aktasbdr.cryptocase.domain.mapper.KlineDataMapper
 import com.aktasbdr.cryptocase.domain.model.KlineData
-import com.aktasbdr.cryptocase.utils.mapWith
-import com.aktasbdr.cryptocase.utils.toEpochSecond
+import com.aktasbdr.cryptocase.core.domain.mapper.mapWith
+import com.aktasbdr.cryptocase.core.domain.mapper.toEpochSecond
 import java.util.*
 import java.util.Calendar.DATE
 import javax.inject.Inject

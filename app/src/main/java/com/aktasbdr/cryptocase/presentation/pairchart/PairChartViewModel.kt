@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.ui.pairchart
+package com.aktasbdr.cryptocase.presentation.pairchart
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

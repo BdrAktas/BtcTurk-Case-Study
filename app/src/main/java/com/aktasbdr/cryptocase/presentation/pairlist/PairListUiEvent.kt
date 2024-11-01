@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.ui.pairlist
+package com.aktasbdr.cryptocase.presentation.pairlist
 
 sealed class PairListUiEvent {
     data class NavigateToPairChart(
