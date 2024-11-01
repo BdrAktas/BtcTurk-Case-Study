@@ -19,7 +19,7 @@ class ShowError @Inject constructor(
     suspend operator fun invoke(exception: Throwable) {
 
         val handledException = if (exception is Exceptions) {
-            exception // Zaten handle edilmiş exception'ı tekrar handle etme
+            exception
         } else {
             handleException(exception)
         }
