@@ -11,10 +11,11 @@ class CommonRepository @Inject constructor(
     private val commonService: CommonService,
     private val handleException: HandleException
 ) {
-
     suspend fun getTickers(pairSymbol: String): List<TickerResponse> {
-        return runCatching {
+        return try {
             commonService.getTickers(pairSymbol).data.orEmpty()
-        }.getOrElse { throw handleException(it) }
+        } catch (e: Exception) {
+            throw handleException(e)
+        }
     }
 }

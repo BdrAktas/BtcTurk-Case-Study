@@ -57,7 +57,7 @@ class PairChartFragment : Fragment() {
     }
 
     private fun renderView(uiState: PairChartUiState) = with(binding) {
-        val titleWithChart = "               ${args.pairNormalized.replace("_", "/")} Chart"
+        val titleWithChart = "            ${args.pairNormalized.replace("_", "/")} Chart"
         (requireActivity() as AppCompatActivity).supportActionBar?.title = titleWithChart
 
         val lineDataSet = LineDataSet(uiState.entries, uiState.symbol).apply {
