@@ -9,6 +9,8 @@ import javax.inject.Inject
 class TickerMapper @Inject constructor() : Mapper<TickerResponse, Ticker> {
 
     override fun map(input: TickerResponse): Ticker = with(input) {
+        println("TickerMapper - Mapping ticker: pair=${input.pair}, last=${input.last}") // Debug log
+
         return Ticker(
             pair = pair.orEmpty(),
             pairNormalized = pairNormalized.orEmpty(),
@@ -16,6 +18,8 @@ class TickerMapper @Inject constructor() : Mapper<TickerResponse, Ticker> {
             volume = volume.orZero(),
             dailyPercent = dailyPercent.orZero(),
             numeratorSymbol = numeratorSymbol.orEmpty(),
-        )
+        ).also {
+            println("TickerMapper - Mapped result: pair=${it.pair}, last=${it.last}") // Debug log
+        }
     }
 }

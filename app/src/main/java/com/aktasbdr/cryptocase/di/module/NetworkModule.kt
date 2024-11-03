@@ -1,5 +1,6 @@
 package com.aktasbdr.cryptocase.di.module
 
+import com.aktasbdr.cryptocase.data.service.CommonService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.aktasbdr.cryptocase.di.qualifier.CommonApi
@@ -18,10 +19,10 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 @Module
 class NetworkModule {
-
     @Provides
     @Singleton
     fun provideGson(): Gson {
+        println("NetworkModule - Providing Gson instance") // Debug log
         return GsonBuilder()
             .serializeNulls()
             .create()
@@ -30,8 +31,16 @@ class NetworkModule {
     @Provides
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {
+        println("NetworkModule - Setting up OkHttpClient") // Debug log
+
+        val loggingInterceptor = HttpLoggingInterceptor { message ->
+            println("OkHttp --> $message") // Debug log
+        }.apply {
+            level = HttpLoggingInterceptor.Level.BODY // Tam detaylı logging
+        }
+
         return OkHttpClient.Builder()
-            .addInterceptor(HttpLoggingInterceptor())
+            .addInterceptor(loggingInterceptor)
             .connectTimeout(20L, SECONDS)
             .readTimeout(60L, SECONDS)
             .writeTimeout(120L, SECONDS)
@@ -45,6 +54,7 @@ class NetworkModule {
         okHttpClient: OkHttpClient,
         gson: Gson
     ): Retrofit {
+        println("NetworkModule - Creating Common API Retrofit instance") // Debug log
         return Retrofit.Builder()
             .client(okHttpClient)
             .baseUrl(COMMON_BASE_URL)
@@ -59,6 +69,7 @@ class NetworkModule {
         okHttpClient: OkHttpClient,
         gson: Gson
     ): Retrofit {
+        println("NetworkModule - Creating Graph API Retrofit instance") // Debug log
         return Retrofit.Builder()
             .client(okHttpClient)
             .baseUrl(GRAPH_BASE_URL)
@@ -70,4 +81,7 @@ class NetworkModule {
         private const val COMMON_BASE_URL = "https://api.btcturk.com/api/"
         private const val GRAPH_BASE_URL = "https://graph-api.btcturk.com/"
     }
+}// Debug için kullanışlı extension
+fun Any.logDebug(message: String) {
+    println("${this::class.simpleName} - $message")
 }

@@ -9,7 +9,6 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
-import retrofit2.create
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
@@ -21,7 +20,8 @@ class ServiceModule {
     fun provideCommonService(
         @CommonApi retrofit: Retrofit
     ): CommonService {
-        return retrofit.create()
+        println("ServiceModule - Creating CommonService") // Debug log
+        return retrofit.create(CommonService::class.java)
     }
 
     @Provides
@@ -29,6 +29,7 @@ class ServiceModule {
     fun provideGraphService(
         @GraphApi retrofit: Retrofit
     ): GraphService {
-        return retrofit.create()
+        println("ServiceModule - Creating GraphService") // Debug log
+        return retrofit.create(GraphService::class.java)
     }
 }

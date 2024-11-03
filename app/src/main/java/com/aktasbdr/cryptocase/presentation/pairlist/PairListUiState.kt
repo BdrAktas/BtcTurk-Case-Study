@@ -6,16 +6,12 @@ import com.aktasbdr.cryptocase.presentation.pairlist.PairListAdapter.PairListIte
 
 data class PairListUiState(
     val favoriteItems: List<FavoriteListItem> = emptyList(),
-    val pairItems: List<PairListItem> = emptyList()
+    val pairItems: List<PairListItem> = emptyList(),
+    val tickers: List<Ticker> = emptyList(),
+    val isLoading: Boolean = false,
+    val isFavoriteLayoutVisible: Boolean = false
 ) {
-
-    val tickers: List<Ticker>
-        get() = pairItems.map { it.ticker }
-
-    val isFavoriteLayoutVisible: Boolean
-        get() = favoriteItems.isNotEmpty()
-
-    fun isFavorite(pairName: String): Boolean {
-        return favoriteItems.any { it.favorite.pairName == pairName }
+    fun isFavorite(pairNormalized: String): Boolean {
+        return favoriteItems.any { it.favorite.pairName == pairNormalized }
     }
 }

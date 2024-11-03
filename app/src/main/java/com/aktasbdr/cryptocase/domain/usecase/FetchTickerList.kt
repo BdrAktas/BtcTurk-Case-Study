@@ -1,5 +1,6 @@
 package com.aktasbdr.cryptocase.domain.usecase
 
+import com.aktasbdr.cryptocase.core.data.remote.NetworkResult
 import com.aktasbdr.cryptocase.data.repository.CommonRepository
 import com.aktasbdr.cryptocase.domain.mapper.TickerMapper
 import com.aktasbdr.cryptocase.domain.model.Ticker
@@ -11,10 +12,46 @@ class FetchTickerList @Inject constructor(
     private val tickerMapper: TickerMapper,
     private val updatePair: UpdatePair
 ) {
+    suspend operator fun invoke(pairSymbol: String = ""): NetworkResult<List<Ticker>> {
+        println("FetchTickerList - invoke called with symbol: $pairSymbol") // Debug log
 
-    suspend operator fun invoke(pairSymbol: String = ""): List<Ticker> {
-        val response = commonRepository.getTickers(pairSymbol)
-        return response.map { it.mapWith(tickerMapper) }
-            .also { updatePair(it) }
+        return when (val result = commonRepository.getTickers(pairSymbol)) {
+            is NetworkResult.Success -> {
+                println("FetchTickerList - Repository success with ${result.data.size} items") // Debug log
+
+                val mappedTickers = result.data.map {
+                    println("FetchTickerList - Mapping ticker: $it") // Debug log
+                    it.mapWith(tickerMapper)
+                }
+                println("FetchTickerList - Mapped ${mappedTickers.size} tickers") // Debug log
+
+                updatePair(mappedTickers)
+                println("FetchTickerList - UpdatePair completed") // Debug log
+
+                NetworkResult.Success(mappedTickers)
+            }
+            is NetworkResult.Error -> {
+                println("FetchTickerList - Error: ${result.exception.message}") // Debug log
+                NetworkResult.Error(result.exception)
+            }
+            NetworkResult.Loading -> {
+                println("FetchTickerList - Loading") // Debug log
+                NetworkResult.Loading
+            }
+        }
     }
+//suspend operator fun invoke(pairSymbol: String = ""): NetworkResult<List<Ticker>> = withContext(Dispatchers.IO) {
+//    return@withContext when (val result = commonRepository.getTickers(pairSymbol)) {
+//        is NetworkResult.Success -> {
+//            val mappedTickers = withContext(Dispatchers.Default) {
+//                result.data.map { ticker -> ticker.mapWith(tickerMapper) }
+//            }
+//
+//            updatePair(mappedTickers)
+//            NetworkResult.Success(mappedTickers)
+//        }
+//        is NetworkResult.Error -> result
+//        NetworkResult.Loading -> NetworkResult.Loading
+//    }
+//}
 }
