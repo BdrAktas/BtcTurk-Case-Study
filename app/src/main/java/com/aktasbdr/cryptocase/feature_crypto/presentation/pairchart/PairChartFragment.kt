@@ -43,7 +43,6 @@ class PairChartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initView()
         collectState(viewModel.uiState, ::renderView)
-        collectEvent(viewModel.uiEvent, ::handleEvent)
         viewModel.init(args.pairNormalized.replace("_", ""))
     }
 
@@ -84,9 +83,4 @@ class PairChartFragment : Fragment() {
         }
     }
 
-    private fun handleEvent(uiEvent: PairChartUiEvent) {
-        when (uiEvent) {
-            else -> Unit
-        }
-    }
 }

@@ -46,6 +46,6 @@ class ShowError @Inject constructor(
             else -> context.getString(R.string.error_unknown)
         }
 
-        error.emit(message ?: context.getString(R.string.error_unknown))
+        error.emit(message)
     }
 }

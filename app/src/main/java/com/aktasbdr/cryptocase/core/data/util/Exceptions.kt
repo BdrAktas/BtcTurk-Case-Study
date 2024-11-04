@@ -5,7 +5,7 @@ import com.aktasbdr.cryptocase.core.domain.util.NetworkError
 
 sealed class Exceptions : Exception() {
     data class CommonException(
-        override val message: String = "Bilinmeyen bir hata oluştu. Lütfen tekrar deneyin."
+        override val message: String = R.string.error_unknown.toString()
     ) : Exceptions()
 
     data class HttpException(
