@@ -1,5 +1,8 @@
 package com.aktasbdr.cryptocase.di.module
 
+import android.content.Context
+import com.aktasbdr.cryptocase.core.data.remote.SafeApiCall
+import com.aktasbdr.cryptocase.core.data.util.HandleException
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.aktasbdr.cryptocase.di.qualifier.CommonApi
@@ -14,10 +17,29 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit.SECONDS
 import javax.inject.Singleton
+import dagger.hilt.android.qualifiers.ApplicationContext
+
 
 @InstallIn(SingletonComponent::class)
 @Module
 class NetworkModule {
+
+    @Provides
+    @Singleton
+    fun provideSafeApiCall(
+        handleException: HandleException
+    ): SafeApiCall {
+        return SafeApiCall(handleException)
+    }
+
+    @Provides
+    @Singleton
+    fun provideHandleException(
+        gson: Gson,
+        @ApplicationContext context: Context
+    ): HandleException {
+        return HandleException(gson, context)
+    }
 
     @Provides
     @Singleton

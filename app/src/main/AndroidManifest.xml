@@ -16,7 +16,7 @@
         android:theme="@style/Theme.CryptoCaseStudy">
 
         <activity
-            android:name="com.aktasbdr.cryptocase.presentation.MainActivity"
+            android:name="com.aktasbdr.cryptocase.feature_crypto.presentation.CryptoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

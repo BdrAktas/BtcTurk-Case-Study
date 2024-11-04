@@ -6,4 +6,10 @@
     <color name="light_gray">#F8F8F8</color>
     <color name="soft_gray">#8F98A6</color>
     <color name="deep_blue">#1B232E</color>
+
+    <color name="error_background">#F8D7DA</color>
+    <color name="error_text">#721C24</color>
+    <color name="error_action_text">#09101B</color>
+
+
 </resources>

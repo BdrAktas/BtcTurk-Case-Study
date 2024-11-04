@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/pair_list_fragment"
-        android:name="com.aktasbdr.cryptocase.presentation.pairlist.PairListFragment"
+        android:name="com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.PairListFragment"
         android:label="Pair List Screen"
         tools:layout="@layout/fragment_pair_list">
 
@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/pair_chart_fragment"
-        android:name="com.aktasbdr.cryptocase.presentation.pairchart.PairChartFragment"
+        android:name="com.aktasbdr.cryptocase.feature_crypto.presentation.pairchart.PairChartFragment"
         android:label="Pair Chart Screen"
         tools:layout="@layout/fragment_pair_chart">
 
