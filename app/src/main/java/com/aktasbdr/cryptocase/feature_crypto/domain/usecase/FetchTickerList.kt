@@ -2,7 +2,7 @@ package com.aktasbdr.cryptocase.feature_crypto.domain.usecase
 
 import com.aktasbdr.cryptocase.core.data.remote.NetworkResult
 import com.aktasbdr.cryptocase.feature_crypto.data.repository.CommonRepository
-import com.aktasbdr.cryptocase.feature_crypto.domain.mapper.TickerMapper
+import com.aktasbdr.cryptocase.feature_crypto.data.mappers.TickerMapper
 import com.aktasbdr.cryptocase.feature_crypto.domain.model.Ticker
 import com.aktasbdr.cryptocase.core.domain.extensions.mapWith
 import javax.inject.Inject

@@ -1,7 +1,7 @@
 package com.aktasbdr.cryptocase.feature_crypto.domain.usecase
 
 import com.aktasbdr.cryptocase.feature_crypto.data.repository.FavoriteRepository
-import com.aktasbdr.cryptocase.feature_crypto.domain.mapper.FavoriteMapper
+import com.aktasbdr.cryptocase.feature_crypto.data.mappers.FavoriteMapper
 import com.aktasbdr.cryptocase.feature_crypto.domain.model.Favorite
 import com.aktasbdr.cryptocase.core.domain.extensions.mapWith
 import kotlinx.coroutines.flow.Flow

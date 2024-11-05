@@ -1,7 +1,7 @@
 package com.aktasbdr.cryptocase.di.module
 
-import com.aktasbdr.cryptocase.feature_crypto.data.service.CommonService
-import com.aktasbdr.cryptocase.feature_crypto.data.service.GraphService
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.service.CommonService
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.service.GraphService
 import com.aktasbdr.cryptocase.di.qualifier.CommonApi
 import com.aktasbdr.cryptocase.di.qualifier.GraphApi
 import dagger.Module

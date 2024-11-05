@@ -1,10 +1,11 @@
-package com.aktasbdr.cryptocase.feature_crypto.data.database
+package com.aktasbdr.cryptocase.feature_crypto.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.IGNORE
 import androidx.room.Query
 import androidx.room.Update
+import com.aktasbdr.cryptocase.feature_crypto.data.local.model.FavoriteEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

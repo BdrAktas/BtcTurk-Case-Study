@@ -3,7 +3,7 @@ package com.aktasbdr.cryptocase.feature_crypto.domain.usecase
 import com.aktasbdr.cryptocase.core.data.remote.NetworkResult
 import com.aktasbdr.cryptocase.core.data.remote.SafeApiCall
 import com.aktasbdr.cryptocase.feature_crypto.data.repository.GraphRepository
-import com.aktasbdr.cryptocase.feature_crypto.domain.mapper.KlineDataMapper
+import com.aktasbdr.cryptocase.feature_crypto.data.mappers.KlineDataMapper
 import com.aktasbdr.cryptocase.feature_crypto.domain.model.KlineData
 import com.aktasbdr.cryptocase.core.domain.extensions.mapWith
 import com.aktasbdr.cryptocase.core.data.mapper.toEpochSecond

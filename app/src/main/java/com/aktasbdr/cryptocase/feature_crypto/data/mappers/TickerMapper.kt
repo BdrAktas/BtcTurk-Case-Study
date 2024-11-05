@@ -1,6 +1,6 @@
-package com.aktasbdr.cryptocase.feature_crypto.domain.mapper
+package com.aktasbdr.cryptocase.feature_crypto.data.mappers
 
-import com.aktasbdr.cryptocase.feature_crypto.data.model.CoinsResponse.CoinResponse
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.dto.CoinsResponse.CoinResponse
 import com.aktasbdr.cryptocase.feature_crypto.domain.model.Ticker
 import com.aktasbdr.cryptocase.core.domain.extensions.Mapper
 import com.aktasbdr.cryptocase.core.presentation.extensions.orZero

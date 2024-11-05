@@ -1,8 +1,8 @@
 package com.aktasbdr.cryptocase.feature_crypto.data.repository
 
 import com.aktasbdr.cryptocase.core.data.util.HandleException
-import com.aktasbdr.cryptocase.feature_crypto.data.model.KlineDataResponse
-import com.aktasbdr.cryptocase.feature_crypto.data.service.GraphService
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.dto.KlineDataResponse
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.service.GraphService
 import javax.inject.Inject
 import javax.inject.Singleton
 

@@ -1,6 +1,6 @@
-package com.aktasbdr.cryptocase.feature_crypto.domain.mapper
+package com.aktasbdr.cryptocase.feature_crypto.data.mappers
 
-import com.aktasbdr.cryptocase.feature_crypto.data.database.FavoriteEntity
+import com.aktasbdr.cryptocase.feature_crypto.data.local.model.FavoriteEntity
 import com.aktasbdr.cryptocase.feature_crypto.domain.model.Favorite
 import com.aktasbdr.cryptocase.core.domain.extensions.Mapper
 import javax.inject.Inject

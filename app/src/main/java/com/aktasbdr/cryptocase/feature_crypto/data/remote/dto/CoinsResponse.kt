@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.feature_crypto.data.model
+package com.aktasbdr.cryptocase.feature_crypto.data.remote.dto
 
 import com.google.gson.annotations.SerializedName
 

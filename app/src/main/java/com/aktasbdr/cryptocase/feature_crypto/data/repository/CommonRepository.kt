@@ -2,8 +2,8 @@ package com.aktasbdr.cryptocase.feature_crypto.data.repository
 
 import com.aktasbdr.cryptocase.core.data.remote.SafeApiCall
 import com.aktasbdr.cryptocase.core.data.remote.NetworkResult
-import com.aktasbdr.cryptocase.feature_crypto.data.model.CoinsResponse.CoinResponse
-import com.aktasbdr.cryptocase.feature_crypto.data.service.CommonService
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.dto.CoinsResponse.CoinResponse
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.service.CommonService
 import javax.inject.Inject
 import javax.inject.Singleton
 

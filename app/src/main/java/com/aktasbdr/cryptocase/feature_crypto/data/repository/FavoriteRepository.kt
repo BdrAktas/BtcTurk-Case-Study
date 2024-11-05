@@ -1,8 +1,8 @@
 package com.aktasbdr.cryptocase.feature_crypto.data.repository
 
 import androidx.annotation.WorkerThread
-import com.aktasbdr.cryptocase.feature_crypto.data.database.FavoriteDao
-import com.aktasbdr.cryptocase.feature_crypto.data.database.FavoriteEntity
+import com.aktasbdr.cryptocase.feature_crypto.data.local.dao.FavoriteDao
+import com.aktasbdr.cryptocase.feature_crypto.data.local.model.FavoriteEntity
 import com.aktasbdr.cryptocase.core.data.util.HandleException
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

@@ -2,8 +2,8 @@ package com.aktasbdr.cryptocase.di.module
 
 import android.content.Context
 import androidx.room.Room
-import com.aktasbdr.cryptocase.feature_crypto.data.database.FavoriteDao
-import com.aktasbdr.cryptocase.feature_crypto.data.database.FavoriteDatabase
+import com.aktasbdr.cryptocase.feature_crypto.data.local.dao.FavoriteDao
+import com.aktasbdr.cryptocase.feature_crypto.data.local.database.FavoriteDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

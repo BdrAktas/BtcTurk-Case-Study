@@ -1,4 +1,4 @@
-package com.aktasbdr.cryptocase.feature_crypto.data.database
+package com.aktasbdr.cryptocase.feature_crypto.data.local.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,6 +1,6 @@
-package com.aktasbdr.cryptocase.feature_crypto.data.service
+package com.aktasbdr.cryptocase.feature_crypto.data.remote.service
 
-import com.aktasbdr.cryptocase.feature_crypto.data.model.CoinsResponse
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.dto.CoinsResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

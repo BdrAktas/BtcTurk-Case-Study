@@ -1,6 +1,6 @@
-package com.aktasbdr.cryptocase.feature_crypto.domain.mapper
+package com.aktasbdr.cryptocase.feature_crypto.data.mappers
 
-import com.aktasbdr.cryptocase.feature_crypto.data.model.KlineDataResponse
+import com.aktasbdr.cryptocase.feature_crypto.data.remote.dto.KlineDataResponse
 import com.aktasbdr.cryptocase.feature_crypto.domain.model.KlineData
 import com.aktasbdr.cryptocase.core.domain.extensions.Mapper
 import javax.inject.Inject
