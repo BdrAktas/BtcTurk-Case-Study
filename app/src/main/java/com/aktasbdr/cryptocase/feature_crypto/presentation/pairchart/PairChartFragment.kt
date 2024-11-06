@@ -9,15 +9,14 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
+import com.aktasbdr.cryptocase.R
+import com.aktasbdr.cryptocase.core.presentation.extensions.collectState
+import com.aktasbdr.cryptocase.core.presentation.extensions.viewBinding
+import com.aktasbdr.cryptocase.databinding.FragmentPairChartBinding
+import com.aktasbdr.cryptocase.feature_crypto.presentation.components.CustomMarker
 import com.github.mikephil.charting.animation.Easing.EaseInExpo
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
-import com.aktasbdr.cryptocase.R
-import com.aktasbdr.cryptocase.databinding.FragmentPairChartBinding
-import com.aktasbdr.cryptocase.core.presentation.extensions.collectEvent
-import com.aktasbdr.cryptocase.core.presentation.extensions.collectState
-import com.aktasbdr.cryptocase.core.presentation.extensions.viewBinding
-import com.aktasbdr.cryptocase.feature_crypto.presentation.components.CustomMarker
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -41,7 +40,6 @@ class PairChartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initView()
         collectState(viewModel.uiState, ::renderView)
         viewModel.init(args.pairNormalized.replace("_", ""))
     }
@@ -49,10 +47,6 @@ class PairChartFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         viewModel.fetch()
-    }
-
-    private fun initView() = with(binding) {
-
     }
 
     private fun renderView(uiState: PairChartUiState) = with(binding) {

@@ -34,9 +34,18 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "COMMON_BASE_URL", "\"https://api.btcturk.com/api/\"")
+            buildConfigField("String", "GRAPH_BASE_URL", "\"https://graph-api.btcturk.com/\"")
+        }
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+            )
+            buildConfigField("String", "COMMON_BASE_URL", "\"https://api.btcturk.com/api/\"")
+            buildConfigField("String", "GRAPH_BASE_URL", "\"https://graph-api.btcturk.com/\"")
         }
     }
 

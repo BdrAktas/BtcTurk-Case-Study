@@ -9,12 +9,12 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.aktasbdr.cryptocase.R
-import com.aktasbdr.cryptocase.databinding.ActivityMainBinding
-import com.aktasbdr.cryptocase.feature_crypto.presentation.CryptoUiEvent.ShowErrorMessage
 import com.aktasbdr.cryptocase.core.presentation.extensions.collectEvent
 import com.aktasbdr.cryptocase.core.presentation.extensions.collectState
 import com.aktasbdr.cryptocase.core.presentation.extensions.showError
 import com.aktasbdr.cryptocase.core.presentation.extensions.viewBinding
+import com.aktasbdr.cryptocase.databinding.ActivityMainBinding
+import com.aktasbdr.cryptocase.feature_crypto.presentation.CryptoUiEvent.ShowErrorMessage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -40,7 +40,8 @@ class CryptoActivity : AppCompatActivity() {
     }
 
     private fun initView() = with(binding) {
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHostFragment.findNavController().apply {
             addOnDestinationChangedListener()
             setupActionBarWithNavController(this)

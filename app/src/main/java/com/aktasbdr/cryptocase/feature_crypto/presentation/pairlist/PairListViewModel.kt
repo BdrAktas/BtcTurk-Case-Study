@@ -14,7 +14,16 @@ import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.FavoriteList
 import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.PairListAdapter.PairListItem
 import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.PairListUiEvent.NavigateToPairChart
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -22,7 +31,7 @@ import javax.inject.Inject
 class PairListViewModel @Inject constructor(
     private val showLoading: ShowLoading,
     private val showError: ShowError,
-    private val fetchFavoriteList: FetchFavoriteList,
+    fetchFavoriteList: FetchFavoriteList,
     private val fetchTickerList: FetchTickerList,
     private val favoritePair: FavoritePair,
     private val unFavoritePair: UnFavoritePair
@@ -50,9 +59,11 @@ class PairListViewModel @Inject constructor(
                 is NetworkResult.Success -> {
                     updatePairList(result.data)
                 }
+
                 is NetworkResult.Error -> {
                     showError(result.exception)
                 }
+
                 NetworkResult.Loading -> Unit
             }
 
@@ -77,7 +88,7 @@ class PairListViewModel @Inject constructor(
         }
     }
 
-    fun onPairClicked( pairNormalized: String) {
+    fun onPairClicked(pairNormalized: String) {
         viewModelScope.launch {
             val event = NavigateToPairChart(pairNormalized)
             _uiEvent.emit(event)

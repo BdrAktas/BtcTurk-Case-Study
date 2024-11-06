@@ -21,4 +21,6 @@
     <string name="market_cap">Market Cap</string>
     <string name="price">Price</string>
     <string name="change_last_24h">Change last 24h</string>
+    <string name="error_view_binding_fragment_not_initialized">Should not attempt to get bindings when Fragment views are destroyed</string>
+    <string name="no_data">No data found in response</string>
 </resources>

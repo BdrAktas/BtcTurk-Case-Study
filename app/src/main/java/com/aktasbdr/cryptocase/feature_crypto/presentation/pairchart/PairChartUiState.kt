@@ -1,7 +1,7 @@
 package com.aktasbdr.cryptocase.feature_crypto.presentation.pairchart
 
-import com.github.mikephil.charting.data.Entry
 import com.aktasbdr.cryptocase.feature_crypto.domain.model.KlineData
+import com.github.mikephil.charting.data.Entry
 
 data class PairChartUiState(
     val symbol: String = "",

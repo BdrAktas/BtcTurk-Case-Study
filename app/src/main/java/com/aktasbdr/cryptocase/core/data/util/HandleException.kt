@@ -2,18 +2,17 @@ package com.aktasbdr.cryptocase.core.data.util
 
 import android.content.Context
 import com.aktasbdr.cryptocase.R
-import com.google.gson.Gson
 import com.aktasbdr.cryptocase.core.data.model.ErrorResponse
+import com.google.gson.Gson
 import com.google.gson.JsonParseException
 import com.google.gson.JsonSyntaxException
 import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Inject
-import javax.inject.Singleton
-import retrofit2.HttpException as RetrofitHttpException
-
 import java.io.IOException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
+import javax.inject.Inject
+import javax.inject.Singleton
+import retrofit2.HttpException as RetrofitHttpException
 
 @Singleton
 class HandleException @Inject constructor(
@@ -21,7 +20,6 @@ class HandleException @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
     operator fun invoke(exception: Throwable): Exceptions {
-        println("Received Exception: ${exception::class.java}")
 
         val mappedException = when (exception) {
             is SocketTimeoutException -> Exceptions.TimeoutException()
@@ -33,8 +31,6 @@ class HandleException @Inject constructor(
             is Exceptions -> exception
             else -> Exceptions.CommonException()
         }
-
-        println("Mapped to: ${mappedException::class.java}")
         return mappedException
     }
 
@@ -48,7 +44,8 @@ class HandleException @Inject constructor(
                         ErrorResponse::class.java
                     )
                     Exceptions.HttpException(
-                        errorMessage = response?.message ?: context.getString(R.string.error_unknown),
+                        errorMessage = response?.message
+                            ?: context.getString(R.string.error_unknown),
                         code = exception.code()
                     )
                 }

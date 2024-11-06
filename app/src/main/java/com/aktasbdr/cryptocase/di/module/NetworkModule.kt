@@ -1,15 +1,18 @@
 package com.aktasbdr.cryptocase.di.module
 
 import android.content.Context
+import com.aktasbdr.cryptocase.BuildConfig.COMMON_BASE_URL
+import com.aktasbdr.cryptocase.BuildConfig.GRAPH_BASE_URL
 import com.aktasbdr.cryptocase.core.data.remote.SafeApiCall
 import com.aktasbdr.cryptocase.core.data.util.HandleException
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import com.aktasbdr.cryptocase.di.qualifier.CommonApi
 import com.aktasbdr.cryptocase.di.qualifier.GraphApi
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -17,7 +20,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit.SECONDS
 import javax.inject.Singleton
-import dagger.hilt.android.qualifiers.ApplicationContext
 
 
 @InstallIn(SingletonComponent::class)
@@ -88,8 +90,4 @@ class NetworkModule {
             .build()
     }
 
-    companion object {
-        private const val COMMON_BASE_URL = "https://api.btcturk.com/api/"
-        private const val GRAPH_BASE_URL = "https://graph-api.btcturk.com/"
-    }
 }

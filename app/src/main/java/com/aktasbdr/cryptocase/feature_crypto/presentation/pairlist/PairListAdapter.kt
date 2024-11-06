@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.aktasbdr.cryptocase.R
+import com.aktasbdr.cryptocase.core.presentation.extensions.inflater
 import com.aktasbdr.cryptocase.databinding.ItemPairBinding
 import com.aktasbdr.cryptocase.feature_crypto.domain.model.Ticker
 import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.PairListAdapter.PairListItem
 import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.PairListAdapter.PairListItemViewHolder
-import com.aktasbdr.cryptocase.core.presentation.extensions.inflater
 import kotlin.math.absoluteValue
 
 class PairListAdapter(

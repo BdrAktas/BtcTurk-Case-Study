@@ -6,6 +6,7 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle.State.INITIALIZED
 import androidx.lifecycle.LifecycleOwner
 import androidx.viewbinding.ViewBinding
+import com.aktasbdr.cryptocase.R
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
@@ -37,7 +38,7 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
         }
         val lifecycle = fragment.viewLifecycleOwner.lifecycle
         if (!lifecycle.currentState.isAtLeast(INITIALIZED)) {
-            throw IllegalStateException("Should not attempt to get bindings when Fragment views are destroyed.")
+            throw IllegalStateException(R.string.error_view_binding_fragment_not_initialized.toString())
         }
         return viewBindingFactory(thisRef.viewProvider()).also { this.binding = it }
     }
