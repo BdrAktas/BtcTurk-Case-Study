@@ -57,17 +57,25 @@ class PairListFragment : Fragment() {
     private fun initView() = with(binding) {
         swipeRefreshLayout.setOnRefreshListener {
             swipeRefreshLayout.isRefreshing = false
-            viewModel.fetch()
-        }
+            viewModel.fetch(showShimmer = false)        }
 
         rvFavorites.adapter = favoriteListAdapter
         rvPairs.adapter = pairListAdapter
     }
 
+
+
     private fun renderView(uiState: PairListUiState) = with(binding) {
-        favoriteListAdapter.submitList(uiState.favoriteItems)
-        pairListAdapter.submitList(uiState.pairItems)
-        clFavorites.isVisible = uiState.isFavoriteLayoutVisible
+        shimmerLayout.shimmerFrameLayout.isVisible = uiState.isShimmerVisible
+        swipeRefreshLayout.isEnabled = !uiState.isShimmerVisible
+        clFavorites.isVisible = uiState.isFavoriteLayoutVisible && !uiState.isShimmerVisible
+        tvPairs.isVisible = !uiState.isShimmerVisible
+        rvPairs.isVisible = !uiState.isShimmerVisible
+
+        if (!uiState.isShimmerVisible) {
+            favoriteListAdapter.submitList(uiState.favoriteItems)
+            pairListAdapter.submitList(uiState.pairItems)
+        }
     }
 
     private fun handleEvent(uiEvent: PairListUiEvent) {

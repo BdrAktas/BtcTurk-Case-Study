@@ -11,13 +11,18 @@
         android:layout_height="match_parent"
         tools:background="@color/dark_navy">
 
+        <include
+            android:id="@+id/shimmerLayout"
+            layout="@layout/layout_shimmer_pair_list"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/clFavorites"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="visible">
+            app:layout_constraintTop_toBottomOf="@id/shimmerLayout">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tvFavorites"
@@ -63,8 +68,8 @@
             android:orientation="vertical"
             android:paddingBottom="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvPairs"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:itemCount="25"
             tools:listitem="@layout/item_pair" />
 

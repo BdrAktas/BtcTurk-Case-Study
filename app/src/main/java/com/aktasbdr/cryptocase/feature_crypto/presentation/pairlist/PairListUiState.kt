@@ -5,6 +5,7 @@ import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.FavoriteList
 import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.PairListAdapter.PairListItem
 
 data class PairListUiState(
+    val isShimmerVisible: Boolean = false,
     val favoriteItems: List<FavoriteListItem> = emptyList(),
     val pairItems: List<PairListItem> = emptyList()
 ) {

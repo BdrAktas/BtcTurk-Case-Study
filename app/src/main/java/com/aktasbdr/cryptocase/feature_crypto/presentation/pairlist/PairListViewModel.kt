@@ -14,6 +14,7 @@ import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.FavoriteList
 import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.PairListAdapter.PairListItem
 import com.aktasbdr.cryptocase.feature_crypto.presentation.pairlist.PairListUiEvent.NavigateToPairChart
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -51,17 +52,26 @@ class PairListViewModel @Inject constructor(
     }
 
 
-    fun fetch() {
+    fun fetch(showShimmer: Boolean = true) {
         viewModelScope.launch {
-            showLoading(isLoading = true)
+
+            if (showShimmer) {
+                _uiState.update { it.copy(isShimmerVisible = true) }
+                delay(500)
+            }else{
+                showLoading(isLoading = true)
+            }
+            delay(500)
 
             when (val result = fetchTickerList()) {
                 is NetworkResult.Success -> {
                     updatePairList(result.data)
+                    _uiState.update { it.copy(isShimmerVisible = false) }
                 }
 
                 is NetworkResult.Error -> {
                     showError(result.exception)
+                    _uiState.update { it.copy(isShimmerVisible = false) }
                 }
 
                 NetworkResult.Loading -> Unit
