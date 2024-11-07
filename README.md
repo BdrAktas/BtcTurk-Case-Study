@@ -2,7 +2,7 @@
 
 ## Introduction
 
-CryptoCase is a cryptocurrency tracking application with a two-page layout:
+CryptoCaseStudy is a cryptocurrency tracking application with a two-page layout:
 - **Home Page**: Displays a list of available cryptocurrencies, allowing users to add and remove favorites.
 - **Chart Page**: Shows real-time charts for selected cryptocurrencies, providing in-depth data visualization.
 
