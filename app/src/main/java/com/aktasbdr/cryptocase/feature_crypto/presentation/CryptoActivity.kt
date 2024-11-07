@@ -54,7 +54,7 @@ class CryptoActivity : AppCompatActivity() {
 
     private fun handleEvent(uiEvent: CryptoUiEvent) {
         when (uiEvent) {
-            is ShowErrorMessage -> binding.root.showError(uiEvent.message) // Updated to use Snackbar
+            is ShowErrorMessage -> binding.root.showError(uiEvent.message)
         }
     }
 
