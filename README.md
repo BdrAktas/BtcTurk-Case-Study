@@ -61,3 +61,8 @@ This project utilizes the Git Flow branching model to manage development efficie
 I adhere to strict commit message standards to maintain a clear and informative Git history. My commit messages follow a specific format, enforced by a `commit-msg` Git hook. This approach ensures consistency across the project, facilitating easier code reviews and automated changelog generation. For a comprehensive guide on commit message format and examples, please see the [Commit Standards documentation](docs/commit_standard.md).
 
 
+## Eksikler
+- Domain kisminda repository olmali ve projede olan data-repository repositoryimpl olarak degistirilmeli
+- Yine domain kisminda modeller olmali ve bunlar kullanilmali sanirim bunlar eksik projede
+- Commit standarti uygulanmadi
+- CI/CD, Pagination, Testler, Modularation, offline-first eklenebilinir; ayrica projede Dynamic/Dark/Light Theme XML'den dolayi uygulanamadi
